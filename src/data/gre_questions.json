@@ -1,0 +1,79 @@
+[
+  {
+    "id": "tc_sb_1",
+    "category": "Text Completion",
+    "subtype": "Single Blank",
+    "difficulty": "Hard",
+    "questionText": "Far from being ________, the executive's proposal was characterized by meticulous foresight and fiscal prudence, winning over even the most skeptical members of the board.",
+    "options": [
+      "audacious",
+      "capricious",
+      "perspicacious",
+      "judicious",
+      "scrupulous"
+    ],
+    "correctIndex": 1,
+    "explanation": "The phrase 'Far from being ________' indicates a contrast with 'meticulous foresight and fiscal prudence.' We need a word that means erratic, impulsive, or lacking planning. 'Capricious' (fickle, unpredictable) fits perfectly.",
+    "whyIncorrect": {
+      "audacious": "Audacious means bold or daring, which does not directly contrast with fiscal foresight.",
+      "capricious": "CORRECT. Capricious means unpredictable and erratic, directly contrasting with prudent foresight.",
+      "perspicacious": "Perspicacious means acutely insightful, which is a positive trait, not a contrast.",
+      "judicious": "Judicious means showing good judgment, which aligns with prudence rather than contrasting it.",
+      "scrupulous": "Scrupulous means diligent and careful, which supports prudence rather than opposing it."
+    }
+  },
+  {
+    "id": "tc_db_1",
+    "category": "Text Completion",
+    "subtype": "Double Blank",
+    "difficulty": "Extreme",
+    "questionText": "Although the biographer attempted to (i) ________ the scandal surrounding the politician's early career, subsequent journalistic investigations only served to (ii) ________ public disapproval.",
+    "blank1Options": [
+      "assuage",
+      "exacerbate",
+      "admonish"
+    ],
+    "blank2Options": [
+      "mitigate",
+      "intensify",
+      "placate"
+    ],
+    "correctIndices": [
+      0,
+      1
+    ],
+    "explanation": "Blank (i): The biographer tried to lessen or soothe the scandal ('assuage'). Blank (ii): 'Although... subsequent investigations only served to' indicates a contrast; instead of softening the scandal, the investigations increased public disapproval ('intensify').",
+    "whyIncorrect": {
+      "blank1": "Assuage means to lessen or soothe, fitting the biographer's goal to quiet the scandal.",
+      "blank2": "Intensify means to make stronger, contradicting the biographer's attempt to assuage."
+    }
+  },
+  {
+    "id": "se_1",
+    "category": "Sentence Equivalence",
+    "subtype": "Sentence Equivalence",
+    "difficulty": "Medium-Hard",
+    "questionText": "Despite the critic's reputation for severe judgment, her review of the novel was surprisingly ________, praising its vivid imagery and emotional depth.",
+    "options": [
+      "laudatory",
+      "censorious",
+      "commendatory",
+      "castigating",
+      "excoriating",
+      "disparaging"
+    ],
+    "correctIndices": [
+      0,
+      2
+    ],
+    "explanation": "The sentence requires TWO words that produce equivalent meaning. 'Surprisingly ________' contrasts with 'reputation for severe judgment' and aligns with 'praising its vivid imagery.' Both 'laudatory' and 'commendatory' mean expressing praise.",
+    "whyIncorrect": {
+      "laudatory": "CORRECT. Expressing praise.",
+      "censorious": "Incorrect. Highly critical (matches her reputation, not the review).",
+      "commendatory": "CORRECT. Expressing praise (synonym pair with laudatory).",
+      "castigating": "Incorrect. Severely punishing or criticizing.",
+      "excoriating": "Incorrect. Severely criticizing.",
+      "disparaging": "Incorrect. Expressing a low opinion."
+    }
+  }
+]

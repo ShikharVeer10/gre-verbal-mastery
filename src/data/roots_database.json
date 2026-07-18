@@ -1,0 +1,538 @@
+{
+  "AB / ABS": {
+    "id": "AB / ABS",
+    "name": "AB / ABS",
+    "meaning": "Away from, off, apart",
+    "origin": "Latin",
+    "prefix": "ab-",
+    "suffix": "-ate",
+    "memoryTips": "Mastering 'AB / ABS' unlocks understanding for words related to Away, off.",
+    "relatedWords": [
+      "immutable",
+      "malleable",
+      "abjure",
+      "amenable",
+      "implacable",
+      "abate",
+      "aberrant",
+      "abstain"
+    ],
+    "exampleWords": [
+      "Absolve",
+      "Abduct",
+      "Abnormal",
+      "Abstruse",
+      "Abdicate"
+    ]
+  },
+  "BELL": {
+    "id": "BELL",
+    "name": "BELL",
+    "meaning": "War, fight",
+    "origin": "Latin",
+    "prefix": "re-",
+    "suffix": "-ious",
+    "memoryTips": "Mastering 'BELL' unlocks understanding for words related to War, conflict.",
+    "relatedWords": [
+      "embellish",
+      "bellicose",
+      "belligerent"
+    ],
+    "exampleWords": [
+      "Belligerent",
+      "Bellicose",
+      "Rebellion",
+      "Antebellum"
+    ]
+  },
+  "CAP / CAPT / CIP": {
+    "id": "CAP / CAPT / CIP",
+    "name": "CAP / CAPT / CIP",
+    "meaning": "Take, hold, seize",
+    "origin": "Latin",
+    "prefix": "con-",
+    "suffix": "-ious",
+    "memoryTips": "Mastering 'CAP / CAPT / CIP' unlocks understanding for words related to Seize, take.",
+    "relatedWords": [
+      "capricious",
+      "capitulate",
+      "captious",
+      "capacious",
+      "capacity",
+      "caparison",
+      "recapitulate",
+      "recapitulated"
+    ],
+    "exampleWords": [
+      "Capacious",
+      "Captivate",
+      "Incipient",
+      "Precipitate"
+    ]
+  },
+  "CHRON": {
+    "id": "CHRON",
+    "name": "CHRON",
+    "meaning": "Time",
+    "origin": "Greek",
+    "prefix": "ana-",
+    "suffix": "-ic",
+    "memoryTips": "Mastering 'CHRON' unlocks understanding for words related to Time, period.",
+    "relatedWords": [
+      "anachronism",
+      "anachronistic",
+      "chronological",
+      "synchronous"
+    ],
+    "exampleWords": [
+      "Anachronism",
+      "Chronic",
+      "Chronology",
+      "Synchronize"
+    ]
+  },
+  "CRED": {
+    "id": "CRED",
+    "name": "CRED",
+    "meaning": "Believe, trust",
+    "origin": "Latin",
+    "prefix": "in-",
+    "suffix": "-ulous",
+    "memoryTips": "Mastering 'CRED' unlocks understanding for words related to Believe.",
+    "relatedWords": [
+      "credulous",
+      "credence",
+      "incredulous",
+      "credibility",
+      "credible",
+      "credulity",
+      "discredit"
+    ],
+    "exampleWords": [
+      "Credulous",
+      "Incredible",
+      "Credence",
+      "Credential"
+    ]
+  },
+  "DIC / DICT": {
+    "id": "DIC / DICT",
+    "name": "DIC / DICT",
+    "meaning": "Say, speak, declare",
+    "origin": "Latin",
+    "prefix": "pre-",
+    "suffix": "-ion",
+    "memoryTips": "Mastering 'DIC / DICT' unlocks understanding for words related to Speak, tell.",
+    "relatedWords": [
+      "mendicant",
+      "sporadic",
+      "dichotomy",
+      "judicious",
+      "eradicate",
+      "modicum",
+      "dictum",
+      "malediction"
+    ],
+    "exampleWords": [
+      "Dictum",
+      "Vindicate",
+      "Contradict",
+      "Predict"
+    ]
+  },
+  "DOG / DOX": {
+    "id": "DOG / DOX",
+    "name": "DOG / DOX",
+    "meaning": "Opinion, doctrine",
+    "origin": "Greek",
+    "prefix": "ortho-",
+    "suffix": "-ic",
+    "memoryTips": "Mastering 'DOG / DOX' unlocks understanding for words related to Opinion, belief.",
+    "relatedWords": [
+      "dogmatic",
+      "dogma",
+      "doggerel",
+      "dog",
+      "dogged",
+      "doggedness"
+    ],
+    "exampleWords": [
+      "Dogmatic",
+      "Orthodox",
+      "Paradox",
+      "Dogma"
+    ]
+  },
+  "EQU": {
+    "id": "EQU",
+    "name": "EQU",
+    "meaning": "Equal, even",
+    "origin": "Latin",
+    "prefix": "in-",
+    "suffix": "-able",
+    "memoryTips": "Mastering 'EQU' unlocks understanding for words related to Equal.",
+    "relatedWords": [
+      "obsequious",
+      "equivocate",
+      "equivocal",
+      "equanimity",
+      "requite",
+      "unequivocal",
+      "adequate",
+      "consequential"
+    ],
+    "exampleWords": [
+      "Equanimity",
+      "Equivocal",
+      "Iniquity",
+      "Equitable"
+    ]
+  },
+  "FAC / FIC / FECT": {
+    "id": "FAC / FIC / FECT",
+    "name": "FAC / FIC / FECT",
+    "meaning": "Make, do",
+    "origin": "Latin",
+    "prefix": "af-",
+    "suffix": "-ious",
+    "memoryTips": "Mastering 'FAC / FIC / FECT' unlocks understanding for words related to Make, produce.",
+    "relatedWords": [
+      "facetious",
+      "facilitate",
+      "facile",
+      "multifaceted",
+      "artifact",
+      "deface",
+      "effaced",
+      "faction"
+    ],
+    "exampleWords": [
+      "Facility",
+      "Factious",
+      "Efficacious",
+      "Affectation"
+    ]
+  },
+  "GEN": {
+    "id": "GEN",
+    "name": "GEN",
+    "meaning": "Birth, produce, kind",
+    "origin": "Latin/Greek",
+    "prefix": "con-",
+    "suffix": "-ial",
+    "memoryTips": "Mastering 'GEN' unlocks understanding for words related to Birth, origin.",
+    "relatedWords": [
+      "cogent",
+      "engender",
+      "ingenuous",
+      "intransigent",
+      "disingenuous",
+      "exigent",
+      "genial",
+      "heterogeneous"
+    ],
+    "exampleWords": [
+      "Genial",
+      "Engender",
+      "Congenital",
+      "Genesis"
+    ]
+  },
+  "GRAPH / GRAM": {
+    "id": "GRAPH / GRAM",
+    "name": "GRAPH / GRAM",
+    "meaning": "Write, record",
+    "origin": "Greek",
+    "prefix": "epi-",
+    "suffix": "-ic",
+    "memoryTips": "Mastering 'GRAPH / GRAM' unlocks understanding for words related to Write, draw.",
+    "relatedWords": [
+      "cartographer",
+      "cartography",
+      "hagiographic",
+      "lexicography"
+    ],
+    "exampleWords": [
+      "Epigram",
+      "Graphic",
+      "Telegraph",
+      "Diagram"
+    ]
+  },
+  "LOQ / LOC": {
+    "id": "LOQ / LOC",
+    "name": "LOQ / LOC",
+    "meaning": "Speak, talk",
+    "origin": "Latin",
+    "prefix": "elo-",
+    "suffix": "-acious",
+    "memoryTips": "Mastering 'LOQ / LOC' unlocks understanding for words related to Talk, speak.",
+    "relatedWords": [
+      "loquacious",
+      "eloquent",
+      "grandiloquent",
+      "obloquy",
+      "eloquence",
+      "grandiloquence",
+      "soliloquy"
+    ],
+    "exampleWords": [
+      "Loquacious",
+      "Eloquent",
+      "Circumlocution",
+      "Grandiloquent"
+    ]
+  },
+  "LUC / LUM": {
+    "id": "LUC / LUM",
+    "name": "LUC / LUM",
+    "meaning": "Light, shine",
+    "origin": "Latin",
+    "prefix": "el-",
+    "suffix": "-id",
+    "memoryTips": "Mastering 'LUC / LUM' unlocks understanding for words related to Light, clear.",
+    "relatedWords": [
+      "lucid",
+      "elucidate",
+      "pellucid",
+      "plucky",
+      "fluctuate",
+      "lucrative",
+      "lucre",
+      "luculent"
+    ],
+    "exampleWords": [
+      "Lucid",
+      "Elucidate",
+      "Luminous",
+      "Translucent"
+    ]
+  },
+  "MAL": {
+    "id": "MAL",
+    "name": "MAL",
+    "meaning": "Bad, ill, evil",
+    "origin": "Latin",
+    "prefix": "mal-",
+    "suffix": "-evolent",
+    "memoryTips": "Mastering 'MAL' unlocks understanding for words related to Bad, evil.",
+    "relatedWords": [
+      "amalgamate",
+      "anomaly",
+      "malevolent",
+      "malinger",
+      "anomalous",
+      "malfeasance",
+      "malign",
+      "maladroit"
+    ],
+    "exampleWords": [
+      "Malevolent",
+      "Malign",
+      "Maladroit",
+      "Malediction"
+    ]
+  },
+  "PATH": {
+    "id": "PATH",
+    "name": "PATH",
+    "meaning": "Feeling, disease, suffering",
+    "origin": "Greek",
+    "prefix": "sym-",
+    "suffix": "-etic",
+    "memoryTips": "Mastering 'PATH' unlocks understanding for words related to Feeling.",
+    "relatedWords": [
+      "antipathy",
+      "apathy",
+      "apathetic",
+      "empathetic",
+      "pathological",
+      "pathos"
+    ],
+    "exampleWords": [
+      "Apathy",
+      "Antipathy",
+      "Empathy",
+      "Pathology"
+    ]
+  },
+  "PHIL": {
+    "id": "PHIL",
+    "name": "PHIL",
+    "meaning": "Love, affection",
+    "origin": "Greek",
+    "prefix": "philo-",
+    "suffix": "-ic",
+    "memoryTips": "Mastering 'PHIL' unlocks understanding for words related to Love.",
+    "relatedWords": [
+      "philistine",
+      "philander",
+      "philanthropist",
+      "philanthropy"
+    ],
+    "exampleWords": [
+      "Philanthropy",
+      "Bibliophile",
+      "Philosophy",
+      "Philharmonic"
+    ]
+  },
+  "PLAC": {
+    "id": "PLAC",
+    "name": "PLAC",
+    "meaning": "Please, calm, soothe",
+    "origin": "Latin",
+    "prefix": "im-",
+    "suffix": "-able",
+    "memoryTips": "Mastering 'PLAC' unlocks understanding for words related to Calm, please.",
+    "relatedWords": [
+      "placate",
+      "placid",
+      "complacent",
+      "displacing",
+      "placebo"
+    ],
+    "exampleWords": [
+      "Complacent",
+      "Implacable",
+      "Placate",
+      "Placebo"
+    ]
+  },
+  "PUGN": {
+    "id": "PUGN",
+    "name": "PUGN",
+    "meaning": "Fight, fist",
+    "origin": "Latin",
+    "prefix": "re-",
+    "suffix": "-acious",
+    "memoryTips": "Mastering 'PUGN' unlocks understanding for words related to Fight.",
+    "relatedWords": [
+      "impugn",
+      "pugnacious",
+      "repugnant"
+    ],
+    "exampleWords": [
+      "Pugnacious",
+      "Repugnant",
+      "Impugn",
+      "Pugilist"
+    ]
+  },
+  "SANCT / SECR": {
+    "id": "SANCT / SECR",
+    "name": "SANCT / SECR",
+    "meaning": "Sacred, holy",
+    "origin": "Latin",
+    "prefix": "de-",
+    "suffix": "-ity",
+    "memoryTips": "Mastering 'SANCT / SECR' unlocks understanding for words related to Holy, sacred.",
+    "relatedWords": [
+      "sanction",
+      "sacrosanct",
+      "sanctimonious",
+      "sanctimony"
+    ],
+    "exampleWords": [
+      "Sanctimonious",
+      "Sanctuary",
+      "Sacrosanct",
+      "Desecrate"
+    ]
+  },
+  "SPEC / SPECT": {
+    "id": "SPEC / SPECT",
+    "name": "SPEC / SPECT",
+    "meaning": "Look, see",
+    "origin": "Latin",
+    "prefix": "intro-",
+    "suffix": "-ive",
+    "memoryTips": "Mastering 'SPEC / SPECT' unlocks understanding for words related to See, look.",
+    "relatedWords": [
+      "specious",
+      "circumspect",
+      "prospective",
+      "respectively",
+      "introspection",
+      "retrospection",
+      "retrospective",
+      "spectrum"
+    ],
+    "exampleWords": [
+      "Introspective",
+      "Circumspect",
+      "Retrospect",
+      "Specious"
+    ]
+  },
+  "TAC / TIC": {
+    "id": "TAC / TIC",
+    "name": "TAC / TIC",
+    "meaning": "Silent, quiet",
+    "origin": "Latin",
+    "prefix": "re-",
+    "suffix": "-urn",
+    "memoryTips": "Mastering 'TAC / TIC' unlocks understanding for words related to Silent.",
+    "relatedWords": [
+      "taciturn",
+      "tacit",
+      "tact",
+      "cataclysm",
+      "cataclysmic",
+      "detached",
+      "detachment"
+    ],
+    "exampleWords": [
+      "Tacit",
+      "Taciturn",
+      "Reticent",
+      "Tacitly"
+    ]
+  },
+  "VER": {
+    "id": "VER",
+    "name": "VER",
+    "meaning": "True, truth",
+    "origin": "Latin",
+    "prefix": "ver-",
+    "suffix": "-ity",
+    "memoryTips": "Mastering 'VER' unlocks understanding for words related to Truth.",
+    "relatedWords": [
+      "maverick",
+      "reverent",
+      "veracity",
+      "verbose",
+      "aver",
+      "covert",
+      "subversive",
+      "verisimilitude"
+    ],
+    "exampleWords": [
+      "Veracity",
+      "Verisimilitude",
+      "Verify",
+      "Aver"
+    ]
+  },
+  "VOC / VOK": {
+    "id": "VOC / VOK",
+    "name": "VOC / VOK",
+    "meaning": "Voice, call",
+    "origin": "Latin",
+    "prefix": "e-",
+    "suffix": "-ative",
+    "memoryTips": "Mastering 'VOC / VOK' unlocks understanding for words related to Call, voice.",
+    "relatedWords": [
+      "advocate",
+      "vociferous",
+      "provocative",
+      "vocation"
+    ],
+    "exampleWords": [
+      "Evocative",
+      "Equivocate",
+      "Vociferous",
+      "Advocate"
+    ]
+  }
+}
