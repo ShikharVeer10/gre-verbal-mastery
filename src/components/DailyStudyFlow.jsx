@@ -10,7 +10,8 @@ import {
   Zap, 
   AlertTriangle,
   Lock,
-  RotateCcw
+  RotateCcw,
+  XCircle
 } from 'lucide-react';
 import { getAllWords, saveState, updateSpacedRepetition } from '../data/dbHelper';
 import { speakWord } from '../utils/audio';
@@ -30,8 +31,73 @@ const STEPS = [
   { id: 12, title: 'Learn Today\'s 15 Words', desc: 'Deep dive into 15 set words' },
   { id: 13, title: 'Immediate Quiz', desc: 'Instant post-study recall check' },
   { id: 14, title: 'Reading Comprehension', desc: 'Passage analysis & context questions' },
-  { id: 15, title: 'Daily Summary', desc: 'Unlock Set ' }
+  { id: 15, title: 'Daily Summary', desc: 'Unlock Next Daily Set' }
 ];
+
+// Helper to generate 4 realistic GRE distractor options from actual database words
+const getMcqOptions = (currentWord, stepId, exerciseIndex, allWords) => {
+  if (!currentWord || !allWords.length) return [];
+
+  const otherWords = allWords.filter(w => w.id !== currentWord.id);
+
+  // Pick 3 distinct distractor words
+  const d1 = otherWords[(exerciseIndex * 3 + 1) % otherWords.length];
+  const d2 = otherWords[(exerciseIndex * 3 + 4) % otherWords.length];
+  const d3 = otherWords[(exerciseIndex * 3 + 7) % otherWords.length];
+
+  let correctText = '';
+  let d1Text = '';
+  let d2Text = '';
+  let d3Text = '';
+
+  if (stepId === 5) {
+    // Synonym Quiz
+    correctText = currentWord.synonyms[0] || 'equivalent term';
+    d1Text = d1.synonyms[0] || d1.word;
+    d2Text = d2.synonyms[0] || d2.word;
+    d3Text = d3.synonyms[0] || d3.word;
+  } else if (stepId === 6) {
+    // Antonym Quiz
+    correctText = currentWord.antonyms[0] || 'opposite term';
+    d1Text = d1.antonyms[0] || d1.word;
+    d2Text = d2.antonyms[0] || d2.word;
+    d3Text = d3.antonyms[0] || d3.word;
+  } else if (stepId === 7) {
+    // Root Quiz
+    correctText = `${currentWord.root} — ${currentWord.rootMeaning || 'Core element'}`;
+    d1Text = `${d1.root} — ${d1.rootMeaning || 'Base element'}`;
+    d2Text = `${d2.root} — ${d2.rootMeaning || 'Base element'}`;
+    d3Text = `${d3.root} — ${d3.rootMeaning || 'Base element'}`;
+  } else if (stepId === 9 || stepId === 10 || stepId === 11) {
+    // Sentence Completion / Equivalence - Distractors are actual GRE words
+    correctText = currentWord.word;
+    d1Text = d1.word;
+    d2Text = d2.word;
+    d3Text = d3.word;
+  } else {
+    // Meaning / Recall - Options are actual definitions of real GRE words
+    correctText = currentWord.simpleMeaning;
+    d1Text = d1.simpleMeaning;
+    d2Text = d2.simpleMeaning;
+    d3Text = d3.simpleMeaning;
+  }
+
+  const baseList = [
+    { text: correctText, isCorrect: true },
+    { text: d1Text, isCorrect: false },
+    { text: d2Text, isCorrect: false },
+    { text: d3Text, isCorrect: false }
+  ];
+
+  // Deterministic shuffle based on exerciseIndex and word length
+  const shift = (exerciseIndex + currentWord.word.length) % 4;
+  const shuffled = [];
+  for (let i = 0; i < 4; i++) {
+    shuffled.push(baseList[(i + shift) % 4]);
+  }
+
+  return shuffled;
+};
 
 export default function DailyStudyFlow({ state, setState, setSelectedWord, setActiveTab }) {
   const [currentStepIdx, setCurrentStepIdx] = useState(0);
@@ -45,6 +111,7 @@ export default function DailyStudyFlow({ state, setState, setSelectedWord, setAc
   const currentWord = currentSetWords[exerciseIndex % currentSetWords.length] || currentSetWords[0];
 
   const stepInfo = STEPS[currentStepIdx];
+  const optionsList = getMcqOptions(currentWord, stepInfo.id, exerciseIndex, allWords);
 
   const handleNextStep = () => {
     if (!state.completedSteps.includes(stepInfo.id)) {
@@ -204,21 +271,17 @@ export default function DailyStudyFlow({ state, setState, setSelectedWord, setAc
                 {stepInfo.id === 5 && `Which word is a primary synonym for "${currentWord.word}"?`}
                 {stepInfo.id === 6 && `Which word is an antonym for "${currentWord.word}"?`}
                 {stepInfo.id === 7 && `What is the root of "${currentWord.word}" (${currentWord.root})?`}
-                {stepInfo.id === 9 && `Fill in the blank: "The scholar's statement was far from being ________."`}
-                {stepInfo.id === 10 && `Sentence Equivalence: Select the word equivalent to "${currentWord.synonyms[0]}".`}
-                {(stepInfo.id <= 3 || stepInfo.id === 8 || stepInfo.id === 11 || stepInfo.id === 13) && `Select the correct definition/context for "${currentWord.word}".`}
+                {stepInfo.id === 9 && `Fill in the blank: "${currentWord.greExampleSentences[0] ? currentWord.greExampleSentences[0].replace(new RegExp(currentWord.word, 'gi'), '________') : `The scholar's attitude was far from being ________.`}"`}
+                {stepInfo.id === 10 && `Sentence Equivalence: Select the word equivalent to "${currentWord.word}".`}
+                {stepInfo.id === 11 && `Text Completion: Select the appropriate word: "${currentWord.exampleSentences[0] ? currentWord.exampleSentences[0].replace(new RegExp(currentWord.word, 'gi'), '________') : `The professor's ________ statement left no room for doubt.`}"`}
+                {(stepInfo.id <= 3 || stepInfo.id === 8 || stepInfo.id === 13) && `Select the correct definition for "${currentWord.word}".`}
               </h3>
 
               {/* Multiple Choice Options */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 16 }}>
-                {[
-                  currentWord.simpleMeaning,
-                  `Alternative option 1 for ${currentWord.word}`,
-                  `Opposing definition for ${currentWord.word}`,
-                  `Unrelated GRE distractor option`
-                ].map((opt, oIdx) => {
-                  const isCorrect = oIdx === 0;
+                {optionsList.map((optObj, oIdx) => {
                   const isSelected = selectedOption === oIdx;
+                  const isCorrect = optObj.isCorrect;
 
                   return (
                     <button
@@ -253,13 +316,20 @@ export default function DailyStudyFlow({ state, setState, setSelectedWord, setAc
                           ? '1px solid #6366f1' 
                           : '1px solid var(--border-glass)',
                         color: '#fff',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
                         transition: 'all 0.2s ease'
                       }}
                     >
-                      <span style={{ fontWeight: 700, marginRight: 12, color: 'var(--text-muted)' }}>
-                        {String.fromCharCode(65 + oIdx)}.
-                      </span>
-                      {opt}
+                      <div>
+                        <span style={{ fontWeight: 700, marginRight: 12, color: 'var(--text-muted)' }}>
+                          {String.fromCharCode(65 + oIdx)}.
+                        </span>
+                        <span>{optObj.text}</span>
+                      </div>
+                      {showExplanation && isCorrect && <CheckCircle2 size={18} color="#34d399" />}
+                      {showExplanation && isSelected && !isCorrect && <XCircle size={18} color="#f43f5e" />}
                     </button>
                   );
                 })}
